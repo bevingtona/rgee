@@ -56,7 +56,7 @@ Map$addLayer(
 ) + Map$addLayer(ee_roi)
 
 # Download raster
-ee_raster <- ee_as_raster(
+ee_raster <- ee_image_as_raster(
   image = ndvi_composite,
   region = ee_roi$geometry(),
   dsn = "/home/aybarpc01/ndvi_s2.tif",
