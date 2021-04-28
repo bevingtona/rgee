@@ -197,7 +197,7 @@ classifierTraining <- train_areas$
     scale = 2
   )
 
-RF <- ee$Classifier$randomForest(50)$
+RF <- ee$Classifier$smileRandomForest(50)$
   train(
     features = classifierTraining,
     classProperty = "Class",
